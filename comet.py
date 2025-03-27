@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import comet_ml
 
 comet_ml.login(project_name="multi_angle_human_and_vehicle_tracking_system")
@@ -10,7 +9,7 @@ model = YOLO("yolo11x.pt")
 
 # Train the model
 results = model.train(
-    data="C:\Users\justi\OneDrive\орн▒\Multi-Angle-Human-and-Vehicle-Tracking-System\First_model\data.yaml",
+    data="First_model\data.yaml",
     project="multi_angle_human_and_vehicle_tracking_system",
     batch=32,
     save_period=1,

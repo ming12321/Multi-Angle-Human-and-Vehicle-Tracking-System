@@ -1,6 +1,6 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
+train: C:/Users/justi/Desktop/Multi_Angle_Human_and_Vehicle_Tracking_System/First_model/train/images
+val: C:/Users/justi/Desktop/Multi_Angle_Human_and_Vehicle_Tracking_System/First_model/valid/images
+test: C:/Users/justi/Desktop/Multi_Angle_Human_and_Vehicle_Tracking_System/First_model/test/images
 
 nc: 3
 names: ['car', 'motorcycle', 'people']
