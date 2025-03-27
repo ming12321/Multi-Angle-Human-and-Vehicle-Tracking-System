@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['car', 'motorcycle', 'people']
+
+roboflow:
+  workspace: yuuuuu-o3aid
+  project: drone_train
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/yuuuuu-o3aid/drone_train/dataset/2
