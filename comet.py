@@ -1,23 +1,18 @@
-from comet_ml import start
-from comet_ml.integration.pytorch import log_model
+import comet_ml
 
-experiment = start(
-  api_key="5svb9M3l7swM5UMvwTEEbJy9t",
-  project_name="multi-angle-human-and-vehicle-tracking-system",
-  workspace="ming12321"
+comet_ml.login(project_name="comet-example-yolo11-coco128")
+
+from ultralytics import YOLO
+
+# Load a model
+model = YOLO("yolo11n.pt")
+
+# Train the model
+results = model.train(
+    data="coco8.yaml",
+    project="comet-example-yolo11-coco128",
+    batch=32,
+    save_period=1,
+    save_json=True,
+    epochs=3,
 )
-
-# Report multiple hyperparameters using a dictionary:
-hyper_params = {
-   "learning_rate": 0.5,
-   "steps": 100000,
-   "batch_size": 50,
-}
-experiment.log_parameters(hyper_params)
-
-# Initialize and train your model
-# model = TheModelClass()
-# train(model)
-
-# Seamlessly log your Pytorch model
-log_model(experiment, model=model, model_name="TheModel")
